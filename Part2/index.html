@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js"></script>
+    <title>Exchange Money</title>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      input,
+      select {
+        font-family: Kanit;
+        font-size: 18px;
+        width: 250px;
+        font-weight: 300;
+        line-height: 25px;
+        text-transform: uppercase;
+        background-color: aliceblue;
+        border: 1px solid lightcyan;
+      }
+      button {
+        padding: 10px;
+        font-family: Kanit;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background-color: orange;
+      }
+      .round-block {
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid lightgrey;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        row-gap: 25px;
+      }
+    </style>
+    <div class="result">
+      <div class="round-block">
+        <caption>
+          แปลงค่าเงิน จากสกุลต่างๆเป็นเงินไทย
+        </caption>
+        <label for="amount">ค่าเงิน</label>
+        <input type="number" id="amount" />
+        <label for="currency">เลือกค่าเป็นเงิน (Form)</label>
+        <select id="currency"></select>
+        <button onclick="exchangeCoin()">Go</button>
+        <div class="result">
+          ผลลัพธ์ (THB)
+          <p id="pen"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
